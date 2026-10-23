@@ -3,9 +3,15 @@
 Site vitrine du salon de coiffure et de beauté situé à Charaf, Casablanca
 (Résidence Oum Rabii, boulevard Moulay Thami).
 
-- **Site en production :** https://cabaretshopesthetique.vercel.app/
-- **Horaires :** 7j/7, 10h—22h
-- **Téléphone :** +212 775 048 227 — **WhatsApp :** +212 632 827 468
+| | |
+|---|---|
+| **Version à jour (miroir)** | https://yedicoco.github.io/Cabaret-Barber-Shop-Esthetique/ |
+| **Domaine canonique** | https://cabaretshopesthetique.vercel.app/ *(à reconnecter au dépôt — voir `ACTIONS-PROPRIETAIRES.md`)* |
+| **Horaires** | 7j/7, 10h—22h |
+| **Téléphone** | +212 775 048 227 — **WhatsApp** : +212 632 827 468 |
+
+Le déploiement GitHub Pages est automatique à chaque `push` sur `main`
+(`.github/workflows/pages.yml`).
 
 ## Stack
 
@@ -31,16 +37,25 @@ Hébergement Vercel. Aucune dépendance externe, aucun cookie par défaut.
 ## SEO et mesure
 
 - Audit complet, décisions et plan d'action : **[README-SEO.md](README-SEO.md)**
+- Ce qui reste à faire côté propriétaire (Google, photos, tarifs) : **[ACTIONS-PROPRIETAIRES.md](ACTIONS-PROPRIETAIRES.md)**
 - `robots.txt` et `sitemap.xml` à la racine — à maintenir à jour à chaque nouvelle page.
 - Données structurées JSON-LD (`BeautySalon`, `WebSite`, `WebPage`, `BreadcrumbList`, `Service`, `FAQPage`).
 - Mesure des conversions : `assets/js/tracking.js` (événements `whatsapp_click`, `phone_click`, `directions_click`, `booking_request_prepared`).
+
+## Outils
+
+| Commande | Rôle |
+|---|---|
+| `./tools/set-domain.sh` | Affiche le domaine canonique configuré |
+| `./tools/set-domain.sh https://nouveau-domaine.tld` | Change le domaine partout (canonical, JSON-LD, sitemap, robots) |
+| `./tools/optimize-images.sh` | Régénère les variantes WebP après ajout de photos réelles |
 
 ## Modifier le site
 
 1. Modifier les fichiers HTML/CSS concernés.
 2. Mettre à jour `sitemap.xml` si une page est ajoutée ou renommée.
 3. Mettre à jour le JSON-LD si le nom, l'adresse, le téléphone ou les horaires changent — **les mêmes informations doivent être identiques sur la fiche Google Business Profile**.
-4. Pousser sur `main` : Vercel redéploie automatiquement.
+4. Pousser sur `main` : GitHub Pages redéploie automatiquement (et Vercel, une fois le projet reconnecté).
 
 ## Règles de contenu
 
