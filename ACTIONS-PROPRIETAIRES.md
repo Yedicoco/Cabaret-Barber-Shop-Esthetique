@@ -89,6 +89,9 @@ Le fichier de vérification est **déjà en ligne** sur les deux hôtes.
 
 ## 3. Fiche Google Business Profile (20 minutes)
 
+> **Création d'une nouvelle fiche : voir [FICHE-GOOGLE-BUSINESS.md](FICHE-GOOGLE-BUSINESS.md)** —
+> valeurs exactes champ par champ, placement du repère, préparation de la vérification vidéo.
+>
 > À faire depuis le compte Google du salon. Si la fiche n'est pas encore revendiquée : https://business.google.com
 
 ### 3.1 Nom — important
@@ -105,7 +108,7 @@ Ne rien ajouter (pas de « meilleur », « pas cher », mots-clés). Un nom surc
 
 ### 3.3 Description — à copier-coller
 ```
-Cabaret Barber Shop & Esthétique est un salon de coiffure et de beauté situé à Charaf, Casablanca, ouvert tous les jours de 10h à 22h. L'équipe accueille les femmes, les hommes et les enfants pour la coiffure, le barber shop, les tresses africaines, les nattes, le twist, les dreadlocks et microlocks, le brushing protéine et la coloration. Le salon propose également l'onglerie (manucure, pédicure, pose de vernis) et des soins du visage adaptés à chaque type de peau. Chaque prestation est réalisée sur mesure, après un échange sur vos envies et la nature de vos cheveux. Les tarifs sont communiqués avant la prestation. Réservation par téléphone au 06 77 50 48 227 ou par WhatsApp au 06 32 82 74 68.
+Cabaret Barber Shop & Esthétique est un salon de coiffure et de beauté situé à Charaf, Casablanca, ouvert tous les jours de 10h à 22h. L'équipe accueille les femmes, les hommes et les enfants pour la coiffure, le barber shop, les tresses africaines, les nattes, le twist, les dreadlocks et microlocks, le brushing protéine et la coloration. Le salon propose également l'onglerie (manucure, pédicure, pose de vernis) et des soins du visage adaptés à chaque type de peau. Chaque prestation est réalisée sur mesure, après un échange sur vos envies et la nature de vos cheveux. Les tarifs sont communiqués avant la prestation. Réservation par téléphone au 07 75 04 82 27 ou par WhatsApp au 06 32 82 74 68.
 ```
 
 ### 3.4 Services à déclarer

@@ -39,6 +39,7 @@ Hébergement Vercel. Aucune dépendance externe, aucun cookie par défaut.
 
 - Audit complet, décisions et plan d'action : **[README-SEO.md](README-SEO.md)**
 - Ce qui reste à faire côté propriétaire (Google, photos, tarifs) : **[ACTIONS-PROPRIETAIRES.md](ACTIONS-PROPRIETAIRES.md)**
+- Création de la fiche Google Business Profile, champ par champ : **[FICHE-GOOGLE-BUSINESS.md](FICHE-GOOGLE-BUSINESS.md)**
 - `robots.txt` et `sitemap.xml` à la racine — à maintenir à jour à chaque nouvelle page.
 - Données structurées JSON-LD (`BeautySalon`, `WebSite`, `WebPage`, `BreadcrumbList`, `Service`, `FAQPage`).
 - Mesure des conversions : `assets/js/tracking.js` (événements `whatsapp_click`, `phone_click`, `directions_click`, `booking_request_prepared`).
