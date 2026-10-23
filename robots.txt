@@ -1,0 +1,8 @@
+# robots.txt — Cabaret Barber Shop & Esthétique (CUT & LOOK), Casablanca
+# Toutes les pages publiques sont explorables, y compris les ressources
+# nécessaires au rendu (CSS, JS, images) utilisées par Googlebot.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://cabaretshopesthetique.vercel.app/sitemap.xml
