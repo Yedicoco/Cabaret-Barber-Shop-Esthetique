@@ -528,19 +528,38 @@ Le site ne charge **aucun** outil de mesure par défaut. Pour l'activer, ajouter
 
 ---
 
-## Déploiement sur Vercel
+## Déploiement : état réel
 
-Je **n'ai pas** accès au projet Vercel : aucune publication n'a été effectuée.
+### GitHub Pages — ✅ déployé et vérifié
+Un workflow (`.github/workflows/pages.yml`) publie le site à chaque `push` sur `main`.
+Le déploiement a été exécuté et **vérifié en ligne** :
 
-**Si le projet Vercel est connecté à ce dépôt GitHub** (cas le plus probable) :
-1. Fusionner la branche dans `main`.
-2. Vercel redéploie automatiquement en production.
-3. `vercel.json`, `robots.txt` et `sitemap.xml` sont pris en compte sans configuration supplémentaire.
+| Contrôle | Résultat |
+|---|---|
+| Page d'accueil | nouveau `title`, nouveau `H1`, 9 cartes, FAQ — ✅ |
+| `robots.txt` | 200, sitemap déclaré — ✅ |
+| `sitemap.xml` | 200, 10 URL — ✅ |
+| `404.html` | servie sur les URL inexistantes — ✅ |
+| `googlee184c103eb04f93a.html` | 200, contenu exact — ✅ |
+| Images WebP / JS | 200 — ✅ |
 
-**Sinon**, depuis un poste avec la CLI :
-```bash
-vercel --prod
-```
+**URL : https://yedicoco.github.io/Cabaret-Barber-Shop-Esthetique/**
+
+### Vercel — ⚠️ non déployé
+Aucun déploiement Vercel n'est enregistré sur le dépôt GitHub, et `robots.txt` renvoie
+toujours 404 sur `cabaretshopesthetique.vercel.app` **après la fusion et deux minutes d'attente**.
+Conclusion vérifiée : le projet Vercel n'est pas relié à ce dépôt et/ou a été déployé manuellement.
+Je n'ai aucun identifiant Vercel : cette étape dépend du propriétaire.
+
+**Conséquence SEO tant que ce n'est pas fait :** les balises `canonical` désignent le domaine
+Vercel, qui sert encore l'ancienne version. Google consolidera donc vers une page périmée.
+
+**Trois solutions, par ordre de préférence :**
+1. Connecter le dépôt au projet Vercel (Settings → Git → branche `main`).
+2. Importer le dépôt comme nouveau projet Vercel et y rattacher le domaine.
+3. Rendre GitHub Pages définitif : `./tools/set-domain.sh https://yedicoco.github.io/Cabaret-Barber-Shop-Esthetique`
+
+Détail pas à pas dans **[ACTIONS-PROPRIETAIRES.md](ACTIONS-PROPRIETAIRES.md)** §1.
 
 **Après déploiement, vérifier :**
 - `https://cabaretshopesthetique.vercel.app/robots.txt` → 200
@@ -587,6 +606,10 @@ onglerie-manucure-casablanca.html       page prestation
 soins-visage-casablanca.html            page prestation
 about.html / contact.html / 404.html
 robots.txt / sitemap.xml / vercel.json
+.github/workflows/pages.yml             déploiement GitHub Pages automatique
+tools/set-domain.sh                     changement de domaine en une commande
+tools/optimize-images.sh                régénération des variantes WebP
+ACTIONS-PROPRIETAIRES.md                guide d'action propriétaire (Google, photos, tarifs)
 googlee184c103eb04f93a.html             vérification Search Console (ne pas supprimer)
 assets/css/style.css
 assets/js/main.js                       inchangé
