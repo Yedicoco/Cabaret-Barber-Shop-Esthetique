@@ -5,13 +5,14 @@ Site vitrine du salon de coiffure et de beauté situé à Charaf, Casablanca
 
 | | |
 |---|---|
-| **Version à jour (miroir)** | https://yedicoco.github.io/Cabaret-Barber-Shop-Esthetique/ |
-| **Domaine canonique** | https://cabaretshopesthetique.vercel.app/ *(à reconnecter au dépôt — voir `ACTIONS-PROPRIETAIRES.md`)* |
+| **Production (canonique)** | https://cabaretshopesthetique.vercel.app/ |
+| **Miroir de secours** | https://yedicoco.github.io/Cabaret-Barber-Shop-Esthetique/ |
 | **Horaires** | 7j/7, 10h—22h |
 | **Téléphone** | +212 775 048 227 — **WhatsApp** : +212 632 827 468 |
 
-Le déploiement GitHub Pages est automatique à chaque `push` sur `main`
-(`.github/workflows/pages.yml`).
+Les deux hébergements se redéploient à chaque `push` sur `main`.
+Les balises `canonical` désignent Vercel : le miroir GitHub Pages ne crée pas de duplication
+aux yeux de Google.
 
 ## Stack
 

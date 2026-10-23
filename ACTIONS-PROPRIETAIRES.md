@@ -9,17 +9,24 @@ Tout ce qui dépendait d'un accès au compte Google ou de photos professionnelle
 
 | Version | URL | État |
 |---|---|---|
-| **Version optimisée (nouvelle)** | https://yedicoco.github.io/Cabaret-Barber-Shop-Esthetique/ | ✅ **en ligne, à jour, redéployée automatiquement** |
-| Version d'origine | https://cabaretshopesthetique.vercel.app/ | ⚠️ **ancienne version** — le projet Vercel n'est pas connecté au dépôt GitHub |
+| **Production (canonique)** | https://cabaretshopesthetique.vercel.app/ | ✅ **à jour, vérifié le 23/10/2026** |
+| Miroir de secours | https://yedicoco.github.io/Cabaret-Barber-Shop-Esthetique/ | ✅ à jour, redéployé automatiquement |
 
-Le site optimisé est donc **réellement en ligne et vérifiable**. Le seul point ouvert est le domaine Vercel, qui dépend de votre compte Vercel (étape 1).
+La version optimisée est donc **en ligne sur le domaine canonique**. Plus rien ne bloque côté hébergement.
 
-> Les URL canoniques pointent vers `cabaretshopesthetique.vercel.app`, conformément à votre choix.
-> Tant que Vercel sert l'ancienne version, Google consolidera vers une page périmée : **l'étape 1 est la plus urgente**. Si vous préférez rendre GitHub Pages définitif, une commande suffit (§1.3).
+Vérifications effectuées sur Vercel : accueil (nouveau `title`, nouveau `H1`, 9 cartes, FAQ),
+6 pages prestations, `robots.txt`, `sitemap.xml`, page 404 personnalisée et fichier de
+vérification Google — tous conformes.
+
+> L'étape 1 ci-dessous n'est plus nécessaire ; elle est conservée comme référence si
+> l'hébergement devait être reconnecté un jour.
 
 ---
 
-## 1. Mettre le domaine Vercel à jour (5 minutes)
+## 1. Vercel — ✅ fait (conservé pour référence)
+
+> Cette section est conservée au cas où l'hébergement serait un jour reconnecté.
+> **Rien à faire aujourd'hui.**
 
 ### 1.1 Le projet est-il connecté à GitHub ?
 Vercel → votre projet → **Settings** → **Git**.

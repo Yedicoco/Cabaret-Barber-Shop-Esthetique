@@ -530,43 +530,31 @@ Le site ne charge **aucun** outil de mesure par défaut. Pour l'activer, ajouter
 
 ## Déploiement : état réel
 
-### GitHub Pages — ✅ déployé et vérifié
-Un workflow (`.github/workflows/pages.yml`) publie le site à chaque `push` sur `main`.
-Le déploiement a été exécuté et **vérifié en ligne** :
+### Vercel — ✅ déployé et vérifié (production, canonique)
+Contrôles exécutés en ligne sur `https://cabaretshopesthetique.vercel.app/` :
 
 | Contrôle | Résultat |
 |---|---|
-| Page d'accueil | nouveau `title`, nouveau `H1`, 9 cartes, FAQ — ✅ |
-| `robots.txt` | 200, sitemap déclaré — ✅ |
+| Accueil | nouveau `title`, `H1` « Salon de coiffure & barber shop à Casablanca », 9 cartes, FAQ — ✅ |
+| 6 pages prestations | accessibles, contenus et FAQ conformes — ✅ |
+| `robots.txt` | 200, `Sitemap:` déclaré — ✅ |
 | `sitemap.xml` | 200, 10 URL — ✅ |
-| `404.html` | servie sur les URL inexistantes — ✅ |
-| `googlee184c103eb04f93a.html` | 200, contenu exact — ✅ |
-| Images WebP / JS | 200 — ✅ |
+| Page 404 | personnalisée et servie sur les URL inexistantes — ✅ |
+| `googlee184c103eb04f93a.html` | 200, contenu exact — reste nécessaire à Search Console — ✅ |
+
+### GitHub Pages — ✅ miroir de secours
+`.github/workflows/pages.yml` publie le site à chaque `push` sur `main`
+(workflow exécuté avec succès). Les balises `canonical` désignant Vercel, le miroir ne crée
+pas de duplication susceptible de nuire au référencement.
 
 **URL : https://yedicoco.github.io/Cabaret-Barber-Shop-Esthetique/**
 
-### Vercel — ⚠️ non déployé
-Aucun déploiement Vercel n'est enregistré sur le dépôt GitHub, et `robots.txt` renvoie
-toujours 404 sur `cabaretshopesthetique.vercel.app` **après la fusion et deux minutes d'attente**.
-Conclusion vérifiée : le projet Vercel n'est pas relié à ce dépôt et/ou a été déployé manuellement.
-Je n'ai aucun identifiant Vercel : cette étape dépend du propriétaire.
-
-**Conséquence SEO tant que ce n'est pas fait :** les balises `canonical` désignent le domaine
-Vercel, qui sert encore l'ancienne version. Google consolidera donc vers une page périmée.
-
-**Trois solutions, par ordre de préférence :**
-1. Connecter le dépôt au projet Vercel (Settings → Git → branche `main`).
-2. Importer le dépôt comme nouveau projet Vercel et y rattacher le domaine.
-3. Rendre GitHub Pages définitif : `./tools/set-domain.sh https://yedicoco.github.io/Cabaret-Barber-Shop-Esthetique`
-
-Détail pas à pas dans **[ACTIONS-PROPRIETAIRES.md](ACTIONS-PROPRIETAIRES.md)** §1.
-
-**Après déploiement, vérifier :**
-- `https://cabaretshopesthetique.vercel.app/robots.txt` → 200
-- `https://cabaretshopesthetique.vercel.app/sitemap.xml` → 200
-- `https://cabaretshopesthetique.vercel.app/googlee184c103eb04f93a.html` → 200 (le fichier doit rester accessible)
+### Ce qu'il faut vérifier après chaque déploiement
+- `…/robots.txt` → 200
+- `…/sitemap.xml` → 200
+- `…/googlee184c103eb04f93a.html` → 200 (ne jamais supprimer ce fichier)
 - une URL inexistante → page 404 aux couleurs du salon
-- ouverture de la page d'accueil sur un téléphone réel
+- l'accueil sur un téléphone réel
 
 ### Si le domaine change plus tard
 Toutes les URL canoniques, le sitemap et le JSON-LD pointent vers `https://cabaretshopesthetique.vercel.app`. Pour basculer sur un domaine définitif :
